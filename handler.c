@@ -157,26 +157,26 @@ unsigned int(*handle_specifiers(const char *specifier))(va_list, buf_t *,
 	int index;
 
 	ca_specifier_t converters[] = {
-		{'c', Co_Char},
-		{'s', store_string},
-		{'d', co_Int},
-		{'i', co_Int},
-		{'%', Co_Percent},
-		{'b', co_Binary},
-		{'u', co_Decimal},
-		{'o', co_Octal},
-		{'x', Co_LoHex},
-		{'X', Co_UpHex},
-		{'S', co_S},
-		{'p', Co_Pointer},
-		{'r', co_r},
-		{'R', co_R},
+		{"c", Co_Char},
+		{"s", store_string},
+		{"d", co_Int},
+		{"i", co_Int},
+		{"%", Co_Percent},
+		{"b", co_Binary},
+		{"u", co_Decimal},
+		{"o", co_Octal},
+		{"x", Co_LoHex},
+		{"X", Co_UpHex},
+		{"S", co_S},
+		{"p", Co_Pointer},
+		{"r", co_r},
+		{"R", co_R},
 		{0, NULL}
 	};
 
 	for (index = 0; converters[index].f; index++)
 	{
-		if (converters[index].specifier == *specifier)
+		if (converters[index].specifier == specifier[0])
 			return (converters[index].f);
 	}
 
