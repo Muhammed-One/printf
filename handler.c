@@ -142,7 +142,6 @@ int get_precision_value(va_list args, const char *ptr_mod, char *ptr_ft)
 /**
  * handle_specifiers - returns a pointer to a function that can convert
  * an argument of a given type to a string and store it in a buffer
- * @specifier: the format specifier character.
  * @int: int
  * @int: int
  * @char: char
@@ -153,6 +152,7 @@ int get_precision_value(va_list args, const char *ptr_mod, char *ptr_ft)
 
 unsigned int(*handle_specifiers(const char *specifier))(va_list, buf_t *,
 		unsigned char, int, int, unsigned char)
+
 {
 	int index;
 
