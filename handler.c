@@ -176,11 +176,7 @@ unsigned int(*handle_specifiers(const char *specifier))(va_list, buf_t *,
 
 	for (index = 0; converters[index].f; index++)
 	{
-<<<<<<< HEAD
-		if (converters[index].specifier == specifier[0])
-=======
 		if ((converters[index].specifier) == (*specifier))
->>>>>>> f086b7ae21caa8d6e03b03524463d5e7abdb73d4
 			return (converters[index].f);
 	}
 
