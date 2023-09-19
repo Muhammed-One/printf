@@ -105,10 +105,17 @@ return (ret);
 unsigned int co_r(va_list args, buf_t *out,
 unsigned char format_flags, int wid, int prec, unsigned char length)
 {
+<<<<<<< HEAD
 	int i, j, size;
 char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 char *str, *null = "(null)";
+=======
+int i, j, size;
+char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+char *rot13 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+char *str, *null = ("null");
+>>>>>>> f086b7ae21caa8d6e03b03524463d5e7abdb73d4
 unsigned int ret = 0;
 
 (void)format_flags;
