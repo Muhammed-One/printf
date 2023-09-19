@@ -176,7 +176,7 @@ unsigned int(*handle_specifiers(const char *specifier))(va_list, buf_t *,
 
 	for (index = 0; converters[index].f; index++)
 	{
-		if ((converters[index].specifier) == (*specifier))
+		if (converters[index].specifier[0] == specifier[0])
 			return (converters[index].f);
 	}
 
